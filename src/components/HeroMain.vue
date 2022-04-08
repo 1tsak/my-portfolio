@@ -8,7 +8,10 @@
       <img class="social-ic" src="../assets/instagram-light.svg" alt="" />
       <img class="social-ic" src="../assets/youtube-light.svg" alt="" />
     </div>
-    <SkillCard/>
+    <div class="row" v-for="skill in skillData" :key="skill">
+      <SkillCard :skillname="skill[0]" :progress="skill[2]" :color="skill[3]"/>
+    </div>
+    
   </div>
 </template>
 
@@ -20,6 +23,16 @@ export default {
     SkillCard
   },
   props: {},
+  data(){
+    return{
+      skillData:[
+            ['Java','logo-path','75','bg-success'],
+            ['Php','logo-path','50','bg-info'],
+            ['Python','logo-path','75','bg-danger'],
+            ['JavaScript','logo-path','75','bg-warning'],
+      ]
+    }
+  }
 };
 </script>
 

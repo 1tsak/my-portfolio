@@ -1,21 +1,25 @@
 <template>
-  <div>
-    <div class="col-md-3 card container">
+    <div class="col-md-2 card container">
         <div class="card-text">
-            <p>Vue</p>
+            <p>{{this.skillname}}</p>
         </div>
       <div class="progress">
-        <div class="progress-bar bg-c-red" style="width: 25%"></div>
+        <div :class="pClass" :style="pStyle"></div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
   name: "SkillCard",
-  props:{
-      
+  props:['skillname','logo','progress','color'],
+  computed:{
+    pStyle(){
+      return 'width:'+this.progress+'%;'
+    },
+    pClass(){
+      return 'progress-bar '+this.color
+    }
   }
 };
 </script>
