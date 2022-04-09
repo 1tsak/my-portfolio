@@ -8,31 +8,45 @@
       <img class="social-ic" src="../assets/instagram-light.svg" alt="" />
       <img class="social-ic" src="../assets/youtube-light.svg" alt="" />
     </div>
-    <div class="row" v-for="skill in skillData" :key="skill">
-      <SkillCard :skillname="skill[0]" :progress="skill[2]" :color="skill[3]"/>
+
+    <div >
+      <p class="m-2" style="text-align: start">Skills:-</p>
+      <div class="row container justify-content">
+        <SkillCard
+          v-for="skill in skillData"
+          :key="skill"
+          :skillname="skill[0]"
+          :progress="skill[2]"
+          :color="skill[3]"
+        />
+      </div>
     </div>
-    
   </div>
 </template>
 
 <script>
-import SkillCard from './SkillCard.vue'
+import SkillCard from "./SkillCard.vue";
 export default {
   name: "HeroMain",
   components: {
-    SkillCard
+    SkillCard,
   },
   props: {},
-  data(){
-    return{
-      skillData:[
-            ['Java','logo-path','75','bg-success'],
-            ['Php','logo-path','50','bg-info'],
-            ['Python','logo-path','75','bg-danger'],
-            ['JavaScript','logo-path','75','bg-warning'],
-      ]
-    }
-  }
+  data() {
+    return {
+      skillData: [
+        ["Java", "logo-path", "75", "bg-success"],
+        ["JavaScript", "logo-path", "75", "bg-warning"],
+        ["Python", "logo-path", "75", "bg-success"],
+        ["Php", "logo-path", "50", "bg-info"],
+        ["C++", "logo-path", "45", "bg-danger"],
+        ["JavaScript", "logo-path", "75", "bg-warning"],
+        ["Python", "logo-path", "75", "bg-success"],
+        ["Php", "logo-path", "50", "bg-info"],
+        ["C++", "logo-path", "45", "bg-danger"],
+      ],
+    };
+  },
 };
 </script>
 

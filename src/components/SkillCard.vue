@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-2 card container">
+    <div class="col-2 m-1 card container">
         <div class="card-text">
             <p>{{this.skillname}}</p>
         </div>
