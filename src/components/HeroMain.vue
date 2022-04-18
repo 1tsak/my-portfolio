@@ -10,8 +10,8 @@
     </div>
 
     <div >
-      <p class="m-2" style="text-align: start">Skills:-</p>
-      <div class="row container justify-content">
+      <p class="m-2" style="text-align:center; margin:50px">Skills:-</p>
+      <div class="row container justify-content-center">
         <SkillCard
           v-for="skill in skillData"
           :key="skill"
@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       skillData: [
-        ["Java", "logo-path", "75", "bg-success"],
+        ["Java", "../assets/github-light.svg", "75", "bg-success"],
         ["JavaScript", "logo-path", "75", "bg-warning"],
         ["Python", "logo-path", "75", "bg-success"],
         ["Php", "logo-path", "50", "bg-info"],

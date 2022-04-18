@@ -1,5 +1,7 @@
 <template>
     <div class="col-2 m-1 card container">
+      <img :src="logo" alt="">
+      <p>{{logo}}</p>
         <div class="card-text">
             <p>{{this.skillname}}</p>
         </div>
