@@ -1,17 +1,23 @@
 <template>
-  <div class="container">
-    <img class="my-logo" src="../assets/ak.png" alt="demo" />
-    <p class="name-text">Aakash Jha</p>
-    <p class="snippet">Web Developer</p>
-    <div class="social">
-      <img class="social-ic" src="../assets/github-light.svg" alt="" />
-      <img class="social-ic" src="../assets/instagram-light.svg" alt="" />
-      <img class="social-ic" src="../assets/youtube-light.svg" alt="" />
+  <div class="container flex flex-col">
+    <div class="head-info flex justify-center items-center space-x-6">
+
+      <img class="my-logo border-2 h-32 border-slate-500 rounded-full p-1" src="../assets/ak.png" alt="demo" />
+      <div class="info-sec flex flex-col items-start">
+
+        <p class="name-text text-2xl mb-0">Aakash Jha</p>
+        <p class="snippet text-sm mb-1">Web Developer</p>
+        <div class="social flex space-x-2 border-2 py-1 px-2 rounded-lg border-slate-500">
+          <img class="social-ic" src="../assets/github-light.svg" alt="" />
+          <img class="social-ic" src="../assets/instagram-light.svg" alt="" />
+          <img class="social-ic" src="../assets/youtube-light.svg" alt="" />
+        </div>
+      </div>
     </div>
 
-    <div >
-      <p class="m-2" style="text-align:center; margin:50px">Skills:-</p>
-      <div class="row container justify-content-center">
+    <div class="skills-cont flex flex-col" >
+      <p class="items-start text-left font-extrabold text-lg">Skills:-</p>
+      <div class="row grid grid-cols-2 gap-2">
         <SkillCard
           v-for="skill in skillData"
           :key="skill"
@@ -51,7 +57,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+/* .container {
   text-align: center;
   margin: auto;
 }
@@ -83,5 +89,5 @@ export default {
   cursor: pointer;
   transform: translateY(-4px);
   transition: 0.3s;
-}
+} */
 </style>

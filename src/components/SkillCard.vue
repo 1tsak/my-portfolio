@@ -1,5 +1,5 @@
 <template>
-    <div class="col-2 m-1 card container">
+    <div class="shadow-md m-2 py-3">
       <img :src="logo" alt="">
       <p>{{logo}}</p>
         <div class="card-text">
